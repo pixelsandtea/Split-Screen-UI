@@ -1,0 +1,51 @@
+/*************************************************************************************
+The "Split-Screen UI" was developed as one-page website solution allowing the user to choose from several layout options while being able to see all the information they want to all at once.
+Copyright (C) 2011 Benjamin Green, http://pixelsandtea.com
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+Pixels & Tea, hereby disclaims all copyright
+interest in the program "Split-Screen UI"
+written by Benjamin Green.
+
+signature of Benjamin Green, 4 November 2011
+Pixels & Tea, Founder
+**************************************************************************************/
+
+Step One: The Four Areas
+This currently only supports up to four areas, though it is possible to add more should you wish, though then it'll start getting more and more complicated and so I won't go into that right now. Add each area to the end of your document before the closing </body> tag using the following format:
+
+<div class="area" id="area1">
+	<div class="content">
+		<!-- AREA1 CONTENT -->
+	</div>
+</div>
+            
+<div class="area" id="area2">
+	<div class="content">
+		<!-- AREA2 CONTENT -->
+	</div>
+</div>…and so on…
+        
+Step Two: Leave The Styling Alone
+At the moment all four areas will be sitting at the bottom of the page looking like an ordinary section of the page and you should leave that as is for the benefit of the "JavaScript Off" kinda folks.
+
+Step Three: Add The Supporting Files
+If you haven't got a '/scripts/' directory immediately below your root level then you should add one and copy the contents of this '/scripts/' directory to yours. And you'll also need the stylesheet.css stored at the root level too.
+
+Step Four: The Nav Menu
+Write your navigation menu
+
+A demo and thorough explanation of this script can be found on my portfolio website at http://www.pixelsandtea.com/2011/11/10/split-screen-ui/

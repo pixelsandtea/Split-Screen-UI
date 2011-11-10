@@ -21,11 +21,27 @@
 	<![endif]-->
 	<?php
 		if(!$isMobile){
-			echo '<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-			<!--[if lt IE 7]><script type="text/javascript" src="scripts/sfhover.js"></script><![endif]-->
-			<script type="text/javascript" src="scripts/jquery.easing.1.3.js"></script>
-			<script type="text/javascript" src="scripts/split-screen-ui.js"></script>
-			<script type="text/javascript" src="scripts/otherScripts.js"></script>';
+			echo "<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
+			<!--[if lt IE 7]><script type='text/javascript' src='scripts/sfhover.js'></script><![endif]-->
+			<script type='text/javascript' src='scripts/jquery.easing.1.3.js'></script>
+			<script type='text/javascript' src='scripts/split-screen-ui.js'></script>
+			$(document).ready(function(){
+				/***** ACCESSIBLE DROP-DOWN NAV MENU *****/
+				$('nav ul li a').css({position: 'static'});
+				$('nav ul ul').siblings('a').addClass('menuParent');
+				$('nav ul li ul li a').focus(function(){
+					$(this).parents('.parent').addClass('navFirstChild');
+				});
+				$('nav ul ul li a').focus(function(){
+					$(this).parents('.children').addClass('navNextChild');
+				});
+				$('nav ul li ul li a').blur(function(){
+					$(this).parents('.parent').removeClass('navFirstChild');
+				});
+				$('nav ul ul li a').blur(function(){
+					$(this).parents('.children').removeClass('navNextChild');
+				});
+			});";
 		}
 	?>
 </head>
