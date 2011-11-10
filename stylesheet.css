@@ -1,0 +1,281 @@
+* {
+	margin:0;
+	padding:0;
+	outline:0;
+} 
+body {
+	background:#E5E5E5;
+	background:-moz-linear-gradient(top, #E5E5E5 0%, #FFFFFF 100%);
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#E5E5E5), color-stop(100%,#FFFFFF));
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#E5E5E5', endColorstr='#FFFFFF',GradientType=0 );
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	overflow-x:hidden;
+	overflow-y:auto;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+}
+.area {	
+	/* if the user has javascript disabled, the slide-out areas will still show at the bottom of the page without overlapping */
+	width:100%;
+	float:none;
+	
+	/* makes sure the visible areas show infront other content */
+	z-index:1;
+	
+	/* prevents the minimised areas' content from appearing, otherwise it just looks disgusting */
+	overflow-x:hidden;
+	
+	/* necessary for window dimensions with an odd numbered value, otherwise you get a 1px gap when showing 2 or more areas */
+	border:1px solid #000000;
+	line-height:normal; 
+}
+#area1 {
+	background: #cb60b3;
+	background:-moz-linear-gradient(top, #cb60b3 0%, #db36a4 100%);
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#cb60b3), color-stop(100%,#db36a4));
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#cb60b3', endColorstr='#db36a4',GradientType=0 );
+}
+#area2 {
+	background: #ffb76b;
+	background:-moz-linear-gradient(top, #ffb76b 0%, #FFBC05 100%);
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffb76b), color-stop(100%,#FFBC05));
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb76b', endColorstr='#FFBC05',GradientType=0 );
+}
+#area3 {
+	background: #49c0f0;
+	background: -moz-linear-gradient(top, #49c0f0 0%, #2cafe3 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#49c0f0), color-stop(100%,#2cafe3));
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49c0f0', endColorstr='#2cafe3',GradientType=0 );
+}
+#area4 {
+	background:#bfd255;
+	background:-moz-linear-gradient(top, #bfd255 0%, #9ecb2d 100%);
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#bfd255), color-stop(100%,#9ecb2d));
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfd255', endColorstr='#9ecb2d',GradientType=0 );
+}
+.area * {
+	color:#ffffff;
+}
+header{
+	width:102%;
+	position:fixed;
+	top:-2px;
+	left:-1%;
+	z-index:2;
+}
+#container{
+	width:960px;
+	margin:0 auto 50px;
+	z-index:0;
+}
+#logo{
+	margin-bottom:20px;
+}
+/*---------------- NAV ---------------*/
+nav {
+	width:493px; /* if javascript is disabled, the navigation bar should still be centred */
+	list-style:none;
+	font-weight:bold;
+	margin:auto;
+	font-size:13px;
+	height:100%;
+}
+nav li {
+	float:left;
+	margin-right:10px;
+	position:relative;
+	display:block;
+	font-size:13px;
+	height:100%;
+}
+nav li#panelOptions {
+	display:none; /* if javascript is disabled, there's no point in displaying the panel options drop-down menu */
+	margin-right:0px;
+}
+
+nav li a {
+	display:block;
+	color:#FFFFFF;
+	background-color:#333333;
+	text-decoration:none;
+	text-shadow:1px 1px 1px rgba(0,0,0,0.6);
+	-moz-border-radius-bottomleft:5px;
+	-moz-border-radius-bottomright:5px;
+	-webkit-border-bottom-left-radius:5px;
+	-webkit-border-bottom-right-radius:5px;
+	border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px;
+	padding:5px 14px 5px;
+}
+nav li a:hover, nav li a:focus {
+	color:#333333;
+	background:#FFFFFF;
+	opacity:0.75;
+	text-decoration:underline;
+	-webkit-transition:all 0.075s linear;
+	-moz-transition:all 0.075s linear;
+	transition:all 0.075s linear;
+	-moz-transform:scale(1.05);
+	-webkit-transform:scale(1.05);
+	transform:scale(1.05);
+}
+nav > ul > li a {
+	border:1px solid #333333;
+}
+nav li a#navArea1, .navArea1Icon {
+	background-color:#cb60b3;
+}
+nav li a#navArea2, .navArea2Icon {
+	background-color:#ffb76b;
+}
+nav li a#navArea3, .navArea3Icon {
+	background-color:#49c0f0;
+}
+nav li a#navArea4, .navArea4Icon {
+	background-color:#bfd255;
+}
+nav, nav ul {
+	list-style:none;
+}
+nav li {
+	position:relative;
+	float:left;
+	height:100%;
+}
+nav li li {
+	clear:both;
+	margin-bottom:2px;
+}
+nav ul ul {
+	position:absolute;
+	left:-10000px;
+	width:100%;
+}
+nav li li a {
+	opacity:0.9;
+	width:310px;
+	padding-bottom:10px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+nav li a:hover, nav li a:focus, nav li.sfhover a {
+	background:#454545;
+	color:#ffffff;
+}
+nav li a:active {
+	background-color:#f4f4f4;
+	color:#454545;
+	text-decoration:line-through;
+}
+nav li * li a:focus, nav li * li a:active {
+	position:relative;
+	left:9999px;
+	top:0;
+	z-index:1;
+}
+nav li a:focus + ul.parent {
+	top:47px;
+}
+nav li a:focus + ul, nav li ul.navFirstChild {
+	left:-1px;
+	margin-left:0;
+}
+nav li ul li a:focus + ul.children {
+	left:9999px;
+	margin-left:100%;
+}
+nav li ul.navFirstChild li a:focus + ul.children {
+	left:-1px;
+	top:50px;
+}
+nav li:hover li a:focus, nav li:hover li a:active, nav li.sfhover li a:active, nav li:hover li li a:focus, nav li:hover li li a:active, nav li.sfhover li li a:active, nav li:hover li li li a:focus, nav li:hover li li li a:active, nav li.sfhover li li li a:active {
+	position:relative;
+	left:0;
+	top:0;
+}
+nav li:hover ul ul, nav li:hover ul ul ul, nav li.sfhover ul ul, nav li.sfhover ul ul ul, nav li a:focus + ul ul, nav li ul.navFirstChild ul.children, nav li ul.navFirstChild ul.navNextChild ul.children {
+	left:-10000px;
+}
+nav li:hover ul, nav li li:hover ul, nav li li li:hover ul, nav li.sfhover ul, nav li li.sfhover ul, nav li li li.sfhover ul, nav li li:hover ul, nav li li li:hover ul, nav li.sfhover ul, nav li li.sfhover ul, nav li li li.sfhover ul, nav li ul.navFirstChild li a:focus + ul.children.navNextChild, nav li ul.navFirstChild li.sfhover ul.children.navNextChild, nav li ul.navFirstChild ul.children.navNextChild, nav li ul.navFirstChild ul.children.navNextChild ul.children.navNextChild {
+	left:-1px;
+}
+.icon {
+	float:left;
+	width:20px;
+	height:20px;
+	border:1px solid #333333;
+	margin-right:10px;
+	padding:0;
+}
+#showAll {
+	margin-top:2px;
+}
+#hideAllIcon {
+	background-color:#FFFFFF;
+}
+.subIcon {
+	float:left;
+	border:1px solid #333333;
+	margin:0;
+	padding:0;
+}	
+.subIconQuarter {
+	width:8px;
+	height:8px;
+}
+.subIconWide {
+	width:18px;
+	height:8px;
+}
+.subIconTall {
+	width:8px;
+	height:18px;
+}
+.navArea3IconUp {
+	position:relative;
+	top:-10px;
+}
+.intro {
+	width:850px;
+	padding:15px 55px 40px;
+	margin:0 auto 30px;
+	background-color:#FFFFFF;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+	position:relative;
+	top:60px;
+	text-align:center;
+}
+#tutorial {
+	width:960px;
+	margin:80px auto 0;
+	z-index:0;
+}
+pre{
+	width:100%;
+	overflow-x:auto;
+	font-family:"Lucida Console", Monaco, monospace;
+}
+h1 {
+	display:block;
+	margin-bottom:20px;
+	font-size:24px;
+	text-align:center;
+}
+p {
+	text-align:justify;
+	color:#000000;
+	margin-bottom:10px;
+}
+hr {
+	margin:10px 5% 15px;
+	border:none;
+	border-bottom:1px solid #ffffff;
+}
+.content {
+	margin-top:25px; /* keeps content away from the navigation bar */
+	padding:20px; /* keeps content away from edges of the areas */
+}
