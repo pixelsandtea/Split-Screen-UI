@@ -2,9 +2,9 @@
 	$currentAgent = $_SERVER['HTTP_USER_AGENT'];
 	$mobileAgents = array('w3c ','acs-','alav','alca','amoi','audi','avan','benq','bird','blac','blaz','brew','cell','cldc','cmd-','dang','doco','eric','hipt','inno','ipaq','java','jigs','kddi','keji','leno','lg-c','lg-d','lg-g','lge-','maui','maxo','midp','mits','mmef','mobi','mot-','moto','mwbp','nec-','newt','noki','palm','pana','pant','phil','play','port','prox','qwap','sage','sams','sany','sch-','sec-','send','seri','sgh-','shar','sie-','siem','smal','smar','sony','sph-','symb','t-mo','teli','tim-','tosh','tsm-','upg1','upsi','vk-v','voda','wap-','wapa','wapi','wapp','wapr','webc','winw','winw','xda ','xda-');
 	$isMobile = '';
-	if(in_array($currentAgent,$mobileAgents,true) || stripos($currentAgent,'iphone') || stripos($currentAgent,'ipod') || stripos($currentAgent,'ipad') || stripos($currentAgent,'windows mobile') || stripos($currentAgent,'android')){
+	if(in_array($currentAgent,$mobileAgents,true) || stripos($currentAgent,'iphone') || stripos($currentAgent,'ipod') || stripos($currentAgent,'ipad') || stripos($currentAgent,'windows mobile') || stripos($currentAgent,'android') || stripos($currentAgent,'msie 6') || stripos($currentAgent,'msie 7') || stripos($currentAgent,'msie 8')){
+		$isMobile = true;
 		exit();
-		/***** header('Location: http://mobile.your-site.com/'); IF YOU CHOOSE THIS OPTION, DON'T FORGET TO CHANGE THE URL TO YOUR OWN MOBILE SITE AND DELETE THE PREVIOUS LINE *****/
 	}
 	else{
 		$isMobile = false;
